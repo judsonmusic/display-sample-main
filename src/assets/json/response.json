@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "backgroundImage": "./assets/images/background-1.jpg",
+    "backgroundColor": "#121212"
+  },
+  "components": {
+    "loginComponent": {
+      "formDef": [
+        {
+          "type": "input",
+          "content": "Username or Email"
+        },
+        {
+          "type": "input",
+          "content": "password",
+          "keyboard": "secure"
+        },
+        {
+          "type": "button",
+          "content": "Login",
+          "action": "login"
+        }
+      ]
+    }
+  }
+}
