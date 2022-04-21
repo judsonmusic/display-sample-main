@@ -1,0 +1,52 @@
+{
+  "components": {
+    "loginComponent": {
+      "componentDef": {
+        "backgroundImage": "./assets/images/background-2.png",
+        "backgroundColor": "#121212",
+        "textColor": "#ffffff",
+        "padding": "200px 20px 20px 20px",
+        "margin": "10px"
+      },
+      "formDef": {
+        "instructions": {
+          "text": "<p>Login</p>",
+          "backgroundColor": "transparent",
+          "textColor": "#000000"
+        },
+        "styles": {
+          "backgroundColor": "transparent",
+          "textColor": "none"
+        },
+        "inputs": [
+          {
+            "indexOrder": 0,
+            "type": "text",
+            "name": "username",
+            "label": "Username",
+            "placeholder": "Enter Username or Email",
+            "cols": 6
+          },
+          {
+            "indexOrder": 1,
+            "type": "password",
+            "name": "password",
+            "label": "Password",
+            "placeholder": "Enter Password",
+            "cols": 6
+          },
+          {
+            "indexOrder": 3,
+            "type": "button",
+            "name": "submit",
+            "label": "Login",
+            "action": "login",
+            "backgroundColor": "#336699",
+            "textColor": "white",
+            "cols": 12
+          }
+        ]
+      }
+    }
+  }
+}

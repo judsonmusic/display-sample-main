@@ -1,0 +1,29 @@
+ion-toolbar {
+    --background: black;
+    ion-title {
+      display: inline-block;
+      float: left;
+      margin: 0 !important;
+    }
+    ul {
+      display: inline-block;
+      float: left;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none;
+      li {
+        height: 54px;
+        padding: 18px 20px;
+        display: inline-block;
+        color: white;
+      }
+      li:hover {
+        border-bottom: 6px solid #4b81a7;
+      }
+    }
+  }
+
+  .active-link{
+      border-bottom: 6px solid orange;
+  }
+  

@@ -41,7 +41,7 @@
             "name": "submit",
             "label": "Login",
             "action": "login",
-            "backgroundColor": "blue",
+            "backgroundColor": "#FF7C32",
             "textColor": "white",
             "cols": 12
           }

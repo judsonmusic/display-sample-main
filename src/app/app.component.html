@@ -1,3 +1,14 @@
 <ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="ion-no-padding ion-no-margin"><img src="./assets/images/display-logo.png" style="max-height:50px;"/></ion-title>
+      <ul>
+        <li [routerLink]="'home'" routerLinkActive="active-link">Home</li>
+        <li [routerLink]="'example1'" routerLinkActive="active-link">Example 1</li>
+        <li [routerLink]="'example2'" routerLinkActive="active-link">Example 2</li>
+        <li [routerLink]="'example3'" routerLinkActive="active-link">Example 3</li>
+      </ul>
+    </ion-toolbar>
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

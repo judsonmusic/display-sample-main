@@ -1,0 +1,30 @@
+<ion-content class="ion-padding">
+  <ion-grid style="max-width: 1280px">
+    <ion-row>
+      <ion-col size="6">
+        <p>Edit the metadata below then click render to see your changes!</p>
+        <ion-button (click)="render()">render</ion-button>
+        <div id="jsoneditor1" style="width: 100%; height: 800px;"></div>
+      </ion-col>
+      <ion-col size="6">
+        <app-login [componentData]="componentData"></app-login>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <h3>Happy with your changes?</h3>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Click save below to store your data. Refresh the page and watch it "stick"!</p>
+            <ion-button (click)="save()">Save</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
