@@ -33,6 +33,9 @@ export class LoginComponent implements OnInit, OnChanges {
       buttons: ['OK']
     } as AlertOptions)
     await alert.present();
+    alert.onDidDismiss().then(()=>{
+      this.loginForm.reset();
+    })
   }
 
 }

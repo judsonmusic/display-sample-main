@@ -29,7 +29,7 @@ Currently the code will allow you to take the initial file, edit it in the jsonE
 
 ## What are some things you would like to do if you had more time?
 
-Due to time constraint I did not do much anything with unit testing, validation, typings, etc. There are some things i would do better like define models for the response/config etc. I would also allow more configuration options for each field like custom validation messages etc.
+Due to time constraint I did not do much anything with unit testing, validation (however the alert does work as suggested etc), typings, etc. There are some things i would do better like define models for the response/config etc. I would also allow more configuration options for each field like custom validation messages etc.
 In angular the formBuilder could gather the fieldNames dynamically and take care of everything as far as validation etc.
 
 I would also think that having an interface where the user can see the images that they can choose from and copy the paths by clicking on the images would be helpful (like thumbnails). To create a "designer using drag and drop etc" would make for a better experience in the UI as opposed to editing JSON directly. Thats just boring. haha.
