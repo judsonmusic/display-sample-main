@@ -26,17 +26,17 @@
       <ion-row>
         <ng-container *ngFor="let input of componentData.formDef.inputs | orderBy:'indexOrder'">
           <ion-col [size]="input.cols">
-            <ng-container *ngIf="input.type === 'input'">
+            <ng-container *ngIf="input.type === 'text' || input.type === 'password'">
               <ion-item>
                 <ion-label position="stacked">{{input.label}}</ion-label>
-                <ion-input placeholder="{{input.placeholder}}"></ion-input>
+                <ion-input [formControlName]="input.name" [type]="input.type" placeholder="{{input.placeholder}}"></ion-input>
               </ion-item>
             </ng-container>
             <ng-container *ngIf="input.type==='button'">
-              <ion-button [ngStyle]="{
-          'background-color' : input.backgroundColor,
-          'color' : input.textColor
-        }">{{input.label}}</ion-button>
+              <ion-button 
+              [disabled]="!loginForm.valid"
+              [ngStyle]="{'background-color' : input.backgroundColor, 'color' : input.textColor}" 
+              (click)="doLogin()">{{input.label}}</ion-button>
             </ng-container>
           </ion-col>
         </ng-container>

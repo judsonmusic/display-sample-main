@@ -5,7 +5,7 @@
         "backgroundImage": "./assets/images/display-logo.png",
         "backgroundColor": "#121212",
         "textColor": "#ffffff",
-        "padding": "10px",
+        "padding": "200px 20px 20px 20px",
         "margin": "10px"
       },
       "formDef": {
@@ -21,7 +21,7 @@
         "inputs": [
           {
             "indexOrder": 0,
-            "type": "input",
+            "type": "text",
             "name": "username",
             "label": "Username",
             "placeholder": "Enter Username or Email",
@@ -29,7 +29,7 @@
           },
           {
             "indexOrder": 1,
-            "type": "input",
+            "type": "password",
             "name": "password",
             "label": "Password",
             "placeholder": "Enter Password",

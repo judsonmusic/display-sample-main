@@ -26,6 +26,18 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 //global styles...
-.jsoneditor-poweredBy{
+.jsoneditor-poweredBy {
     display: none;
+}
+
+ion-input {
+    --background: transparent;
+    background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
