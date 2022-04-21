@@ -1,20 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Login Editor
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true"> 
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p>Edit the metadata below then click render to see your changes!</p>
+        <ion-button (click)="render()">render</ion-button>
+        <div id="jsoneditor" style="width: 100%; height: 800px;"></div>
+      </ion-col>
+      <ion-col size="6">       
+         <app-login [componentData]="componentData"></app-login>
+         <hr>
+         <hr>
+         <hr>
+         <hr>
+         <hr>
+         <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <h3>Happy with your changes?</h3>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Click save below to store your data. Refresh the page and watch it "stick"!</p>
+            <ion-button (click)="save()">Save</ion-button>
+          </ion-card-content>
+        </ion-card>   
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ 
 </ion-content>

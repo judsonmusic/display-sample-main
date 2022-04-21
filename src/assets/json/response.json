@@ -1,26 +1,52 @@
 {
-  "meta": {
-    "backgroundImage": "./assets/images/background-1.jpg",
-    "backgroundColor": "#121212"
-  },
   "components": {
     "loginComponent": {
-      "formDef": [
-        {
-          "type": "input",
-          "content": "Username or Email"
+      "componentDef": {
+        "backgroundImage": "./assets/images/display-logo.png",
+        "backgroundColor": "#121212",
+        "textColor": "#ffffff",
+        "padding": "10px",
+        "margin": "10px"
+      },
+      "formDef": {
+        "instructions": {
+          "text": "<p>Please enter the following information to login:</p>",
+          "backgroundColor": "transparent",
+          "textColor": "#ffffff"
         },
-        {
-          "type": "input",
-          "content": "password",
-          "keyboard": "secure"
+        "styles": {
+          "backgroundColor": "transparent",
+          "textColor": "none"
         },
-        {
-          "type": "button",
-          "content": "Login",
-          "action": "login"
-        }
-      ]
+        "inputs": [
+          {
+            "indexOrder": 0,
+            "type": "input",
+            "name": "username",
+            "label": "Username",
+            "placeholder": "Enter Username or Email",
+            "cols": 12
+          },
+          {
+            "indexOrder": 1,
+            "type": "input",
+            "name": "password",
+            "label": "Password",
+            "placeholder": "Enter Password",
+            "cols": 12
+          },
+          {
+            "indexOrder": 3,
+            "type": "button",
+            "name": "submit",
+            "label": "Login",
+            "action": "login",
+            "backgroundColor": "blue",
+            "textColor": "white",
+            "cols": 12
+          }
+        ]
+      }
     }
   }
 }

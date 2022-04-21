@@ -1,0 +1,50 @@
+<ng-container *ngIf="componentData">
+<div [ngStyle]="
+  { 
+    'background-color': componentData.componentDef.backgroundColor, 
+    'color': componentData.componentDef.textColor,
+    'padding': componentData.componentDef.padding,
+    'margin': componentData.componentDef.margin,
+    'background-image': 'url(' + componentData.componentDef.backgroundImage + ')',
+    'background-size': 'contain',
+    'background-repeat': 'no-repeat'
+  }
+">
+
+
+  <form [formGroup]="loginForm" [ngStyle]="{
+    'background-color': componentData.formDef.styles.backgroundColor,
+    'color': componentData.formDef.styles.textColor}">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h4 [innerHTML]="componentData.formDef.instructions.text" [ngStyle]="{
+          'background-color': componentData.formDef.instructions.backgroundColor,
+          'color': componentData.formDef.instructions.textColor}"></h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let input of componentData.formDef.inputs | orderBy:'indexOrder'">
+          <ion-col [size]="input.cols">
+            <ng-container *ngIf="input.type === 'input'">
+              <ion-item>
+                <ion-label position="stacked">{{input.label}}</ion-label>
+                <ion-input placeholder="{{input.placeholder}}"></ion-input>
+              </ion-item>
+            </ng-container>
+            <ng-container *ngIf="input.type==='button'">
+              <ion-button [ngStyle]="{
+          'background-color' : input.backgroundColor,
+          'color' : input.textColor
+        }">{{input.label}}</ion-button>
+            </ng-container>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+    </ion-grid>
+  </form>
+  </div>
+</ng-container>
+<ng-container *ngIf="!componentData">
+  <p>Waiting on componentData!</p>
+</ng-container>
