@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { JsonEditorOptions } from 'ang-jsoneditor';
-import { MetadataService } from '../services/metadata.service';
+import { MetadataService } from '../../services/metadata.service';
 // eslint-disable-next-line @typescript-eslint/naming-convention
 declare let JSONEditor: any;
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-example3',
+  templateUrl: './example3.page.html',
+  styleUrls: ['./example3.page.scss'],
 })
-export class HomePage implements OnInit {
+export class Example3Page implements OnInit {
   public editorOptions: JsonEditorOptions;
   public metadata: any = null;
   public componentData: any;
@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
 
   ngOnInit(): void {
     // create the editor
-    const container = document.getElementById('jsoneditor');
+    const container = document.getElementById('jsoneditor3');
     const options = {
       mode: 'code',
       modes: ['code', 'form', 'text', 'tree', 'view', 'preview'],
@@ -28,7 +28,7 @@ export class HomePage implements OnInit {
       })
     };
     this.editor= new JSONEditor(container, options);
-    this._metadataSvc.getMetadata().subscribe((res:any)=>{
+    this._metadataSvc.getMetadata('./assets/json/response3.json', 'metaData3').subscribe((res:any)=>{
       this.metadata = res;
       this.componentData = this.metadata.components.loginComponent;
       this.editor.set(this.metadata);
@@ -41,6 +41,6 @@ export class HomePage implements OnInit {
   }
 
   save(){
-   this._metadataSvc.setMetadata(this.metadata);
+   this._metadataSvc.setMetadata(this.metadata, 'metaData3');
   }
 }
